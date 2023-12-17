@@ -4,20 +4,20 @@ import {
   Text,
   View
 } from 'react-native';
-
+// react-native run-android
+/*
 export default class App extends Component{
    render(){
     return(
       <View>
         <Text>Teste</Text>
-
       </View>
     )
    }
 }
 
+*/
 
-/*
 export default function app_one(){
   return (
     <View>
@@ -31,4 +31,3 @@ export default function app_one(){
   )
 }
 
-*/
