@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import type {PropsWithChildren} from 'react';
+
 import {
   Text,
   View
@@ -17,16 +17,13 @@ export default class App extends Component{
 }
 
 */
+import Comp_one from './components/comp_one';
+
 
 export default function app_one(){
   return (
     <View>
-      <View>
-        <Text>Teste</Text>
-      </View>
-      <View>
-        <Text>Testando de novo</Text>
-      </View>
+      <Comp_one/>
     </View>
   )
 }
