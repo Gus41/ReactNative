@@ -6,14 +6,14 @@ import {
   StyleSheet
 } from 'react-native';
 
-export default function Comp_one(){
+export default function Comp_one(props: { nome: string , quantidade: number}){
     return(
-        <View style={styles.container}>
+        <View style = {styles.content}>
             <View>
                 <Text style={styles.txt}>Texto vindo de compontente</Text>
             </View>
             <View>
-                <Text style={styles.txt}>Componente_view</Text>
+                <Text style={styles.txt}>{props.nome} {props.quantidade}</Text>
             </View>
         </View>
     )
@@ -24,10 +24,11 @@ const styles = StyleSheet.create({
         fontSize:20,
         textAlign: 'center'
     },
-    container:{
-        display: 'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor : 'gray'
+    content:{
+        backgroundColor: 'white',
+        padding: 10,
+        borderRadius: 10,
+        shadowColor: 'black',
+        margin:10
     }
 })
