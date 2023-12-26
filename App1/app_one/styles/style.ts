@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor : 'gray',
-        color:'black'
+        color:'black',
+        marginTop:50
+        
+
     },
     txt:{
-        color: 'black',
+        color: 'white',
         fontSize:20,
         textAlign: 'center'
     },
@@ -22,6 +24,16 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         shadowColor: 'black',
         margin:10
+    },
+    image:{
+        width:50,
+        resizeMode:'contain', //ajusta a imagem ao width
+        
+    },
+    imgback:{
+        resizeMode: 'cover',
+        width:'100%',
+        height:'100%'
     }
 })
 export default styles;
