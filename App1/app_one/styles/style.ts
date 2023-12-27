@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 
     },
     txt:{
-        color: 'white',
+        color: 'black',
         fontSize:20,
         textAlign: 'center'
     },
@@ -34,6 +34,15 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
         width:'100%',
         height:'100%'
+    },
+    text_inp:{
+        borderWidth:1,
+        borderColor:'black',
+        margin:10,
+        padding:1,
+        borderRadius:10,
+        width:250
+
     }
 })
 export default styles;

@@ -18,6 +18,7 @@ import Comp_one from './components/comp_one';
 import Boxes from './components/boxes'
 import styles from './styles/style';
 import Cars from './components/car_comp'
+import Text_input from './components/textinp'
 function condicional(p:boolean){
   if(p){
     return(
@@ -41,7 +42,7 @@ export default function app_one(){
     <SafeAreaView style={styles.container}>
      
        
-        <Text style={styles.txt}>Texto</Text>
+        <Text_input/>
         <Button
         title={StateOn?'Desligar':'Ligar'}
         onPress={()=>{
