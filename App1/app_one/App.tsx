@@ -9,7 +9,7 @@ import {
   Alert,
   ImageBackground,
   Switch,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import List from './components/flatlist'
 // react-native run-android
@@ -19,6 +19,7 @@ import Boxes from './components/boxes'
 import styles from './styles/style';
 import Cars from './components/car_comp'
 import Text_input from './components/textinp'
+import Scroll from './components/scroll_view';
 function condicional(p:boolean){
   if(p){
     return(
@@ -62,8 +63,7 @@ export default function app_one(){
           </View>
         } 
 
-        <Cars name='Golf'/>
-        <Cars name='Sandra'/>
+        <Scroll/>
       
     </SafeAreaView>
   )
