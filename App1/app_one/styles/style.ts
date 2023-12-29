@@ -43,6 +43,11 @@ const styles = StyleSheet.create({
         borderRadius:10,
         width:250
 
+    },
+    btn:{
+        alignItems:'center',
+        backgroundColor:'#ccc',
+        padding:10,
     }
 })
 export default styles;
