@@ -21,6 +21,7 @@ import Cars from './components/car_comp'
 import Text_input from './components/textinp'
 import Scroll from './components/scroll_view'
 import Touch from './components/touch'
+import Modal from './components/modal'
 function condicional(p:boolean){
   if(p){
     return(
@@ -63,8 +64,7 @@ export default function app_one(){
             <Text>Estado desligado</Text>
           </View>
         } 
-
-        <Touch/>
+        <Modal/>
       
     </SafeAreaView>
   )
