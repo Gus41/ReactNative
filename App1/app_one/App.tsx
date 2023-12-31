@@ -64,8 +64,8 @@ export default function app_one(){
             <Text>Estado desligado</Text>
           </View>
         } 
-        <Modal/>
-      
+        
+        <Scroll/>      
     </SafeAreaView>
   )
 }

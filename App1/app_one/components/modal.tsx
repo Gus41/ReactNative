@@ -42,7 +42,7 @@ export default function(){
                     <Button
                     title='Fechar'
                     onPress={()=>{
-                        setVisible(!visible)
+                        setVisible(false)
                     }}
                     />
                 </View>
