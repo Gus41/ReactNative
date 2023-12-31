@@ -10,6 +10,9 @@ import {
   ImageBackground,
   Switch,
   SafeAreaView,
+  StatusBar,
+  TextInput,
+
 } from 'react-native';
 import List from './components/flatlist'
 // react-native run-android
@@ -40,11 +43,16 @@ const ImageBackPick = './assets/backgroundpicture.jpg'
 
 export default function app_one(){
   const [StateOn,setStateOn] = useState(true)
+  const [color,setColor] = useState('black')
   return (
     
     <SafeAreaView style={styles.container}>
-     
-       
+      
+        <StatusBar
+        hidden={false}
+        backgroundColor={color}>
+        
+        </StatusBar> 
         <Text_input/>
         <Button
         title={StateOn?'Desligar':'Ligar'}
@@ -64,6 +72,11 @@ export default function app_one(){
             <Text>Estado desligado</Text>
           </View>
         } 
+        <TextInput style={styles.text_inp}
+        onChangeText={(text)=>{
+          setColor(text)
+        }}
+        />
         
         <Scroll/>      
     </SafeAreaView>
