@@ -1,5 +1,5 @@
 import React, { Component,useState } from 'react';
-
+import { NavigationContainer } from '@react-navigation/native';
 import {
   StyleSheet,
   Text,
@@ -15,6 +15,7 @@ import {
 
 } from 'react-native';
 import List from './components/flatlist'
+import { createStackNavigator } from '@react-navigation/stack';
 // react-native run-android
 
 import Comp_one from './components/comp_one';
@@ -25,6 +26,7 @@ import Text_input from './components/textinp'
 import Scroll from './components/scroll_view'
 import Touch from './components/touch'
 import Modal from './components/modal'
+import { create } from 'react-test-renderer';
 function condicional(p:boolean){
   if(p){
     return(
@@ -39,49 +41,36 @@ function condicional(p:boolean){
 const ImageBackPick = './assets/backgroundpicture.jpg'
 
 //states
-
+const Stack = createStackNavigator()
+function Home({}){
+  return(
+    <View style={styles.container}>
+      <Text>Home</Text>
+    </View>
+  )
+}
+function More(){
+  return(
+    <View style={styles.container}>
+      <Text>More</Text>
+    </View>
+  )
+}
 
 export default function app_one(){
   const [StateOn,setStateOn] = useState(true)
   const [color,setColor] = useState('black')
   return (
-    
-    <SafeAreaView style={styles.container}>
-      
-        <StatusBar
-        hidden={false}
-        backgroundColor={color}>
-        
-        </StatusBar> 
-        <Text_input/>
-        <Button
-        title={StateOn?'Desligar':'Ligar'}
-        onPress={()=>{
-          Alert.alert('Valor do State mudado')
-          setStateOn(!StateOn)
-        }}/>
-       
-        {condicional(true)}
-        {
-          StateOn?
-          <View>
-            <Text>Estado Ligado</Text>
-          </View>
-          :
-          <View>
-            <Text>Estado desligado</Text>
-          </View>
-        } 
-        <TextInput style={styles.text_inp}
-        onChangeText={(text)=>{
-          setColor(text)
-        }}
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+        name='Home'
+        component={Home}
+        options={{title:'Home'}}
         />
-        
-        <Scroll/>      
-    </SafeAreaView>
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-
 
 
